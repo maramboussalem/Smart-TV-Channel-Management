@@ -288,8 +288,8 @@
         <file>feather/zoom-in.svg</file>
         <file>feather/zoom-out.svg</file>
     </qresource>
-    <qresource prefix="/new/prefix2">
-        <file>google-bard-usage.png</file>
-    </qresource>
+    <qresource prefix="/new/prefix2"/>
     <qresource prefix="/new/prefix1"/>
+    <qresource prefix="/back"/>
+    <qresource prefix="/img"/>
 </RCC>
