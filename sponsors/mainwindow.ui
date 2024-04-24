@@ -233,31 +233,6 @@ border-bottom:1px solid #ff5c5c
        <string/>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_9">
-      <property name="geometry">
-       <rect>
-        <x>550</x>
-        <y>290</y>
-        <width>211</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QLineEdit{
-	font: 75 11pt &quot;MS Serif&quot;;
-	
-background:transparent;
-border:none;
-color:#ff5c5c;
-	color: rgb(255, 92, 92);
-border-bottom:1px solid #ff5c5c
-
-}</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
      <widget class="QPushButton" name="Reset_2">
       <property name="geometry">
        <rect>
@@ -405,6 +380,66 @@ border-bottom:1px solid #ff5c5c
        <string>Catégorie</string>
       </property>
      </widget>
+     <widget class="QComboBox" name="comboBox_Category">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>330</y>
+        <width>211</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Plat</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gold</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Silver</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bronze</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_Category_2">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>360</y>
+        <width>171</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>HRight</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>HLeft</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BRight</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BLeft</string>
+       </property>
+      </item>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -431,7 +466,7 @@ image: url(:/new/prefix1/422112051_685019823787946_3501015430639793139_n.png);</
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>50</y>
+        <y>80</y>
         <width>811</width>
         <height>321</height>
        </rect>
@@ -467,8 +502,8 @@ image: url(:/new/prefix1/422112051_685019823787946_3501015430639793139_n.png);</
      <widget class="QPushButton" name="ranking">
       <property name="geometry">
        <rect>
-        <x>560</x>
-        <y>410</y>
+        <x>100</x>
+        <y>40</y>
         <width>151</width>
         <height>41</height>
        </rect>
@@ -496,13 +531,13 @@ background:#45a8ff;
 }</string>
       </property>
       <property name="text">
-       <string>Ranking</string>
+       <string>CONTRAT</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_3">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>480</x>
         <y>410</y>
         <width>151</width>
         <height>41</height>
@@ -534,8 +569,8 @@ background:#45a8ff;
      <widget class="QLabel" name="label_32">
       <property name="geometry">
        <rect>
-        <x>-190</x>
-        <y>-80</y>
+        <x>-200</x>
+        <y>-90</y>
         <width>1371</width>
         <height>721</height>
        </rect>
@@ -547,11 +582,227 @@ background:#45a8ff;
        <string/>
       </property>
      </widget>
+     <widget class="QPushButton" name="stats">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>410</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color: rgb(170, 0, 0);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+
+}
+
+QPushButton::hover{
+	font: 81 10pt &quot;Rockwell Extra Bold&quot;;
+color:white;
+border-radius:15px;
+background:#45a8ff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>STATS</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="stats_2">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>450</y>
+        <width>51</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color: rgb(170, 0, 0);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+
+}
+
+QPushButton::hover{
+	font: 81 10pt &quot;Rockwell Extra Bold&quot;;
+color:white;
+border-radius:15px;
+background:#45a8ff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/feather/archive.svg</normaloff>:/icons/feather/archive.svg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ranking_2">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>40</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color: rgb(170, 0, 0);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+
+}
+
+QPushButton::hover{
+	font: 81 10pt &quot;Rockwell Extra Bold&quot;;
+color:white;
+border-radius:15px;
+background:#45a8ff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>CATEGORY</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>30</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+	font: 75 11pt &quot;MS Serif&quot;;
+	
+background:transparent;
+border:none;
+color:#ff5c5c;
+	color: rgb(255, 92, 92);
+border-bottom:1px solid #ff5c5c
+
+}</string>
+      </property>
+      <property name="text">
+       <string>Search</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="find">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>30</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color: rgb(170, 0, 0);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+
+}
+
+QPushButton::hover{
+	font: 81 10pt &quot;Rockwell Extra Bold&quot;;
+color:white;
+border-radius:15px;
+background:#45a8ff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>find</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="reset_search">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>50</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color: rgb(170, 0, 0);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+
+}
+
+QPushButton::hover{
+	font: 81 10pt &quot;Rockwell Extra Bold&quot;;
+color:white;
+border-radius:15px;
+background:#45a8ff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>reset</string>
+      </property>
+     </widget>
      <zorder>label_32</zorder>
      <zorder>tableView</zorder>
      <zorder>label_24</zorder>
      <zorder>ranking</zorder>
      <zorder>pushButton_3</zorder>
+     <zorder>stats</zorder>
+     <zorder>stats_2</zorder>
+     <zorder>ranking_2</zorder>
+     <zorder>lineEdit_3</zorder>
+     <zorder>find</zorder>
+     <zorder>reset_search</zorder>
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -708,31 +959,6 @@ border-bottom:1px solid #ff5c5c
        <string>Put The ID Modify</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="newID">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>190</y>
-        <width>191</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QLineEdit{
-	font: 75 11pt &quot;MS Serif&quot;;
-	
-background:transparent;
-border:none;
-color:#ff5c5c;
-	color: rgb(255, 92, 92);
-border-bottom:1px solid #ff5c5c
-
-}</string>
-      </property>
-      <property name="text">
-       <string>New id</string>
-      </property>
-     </widget>
      <widget class="QLineEdit" name="newNumContrat">
       <property name="geometry">
        <rect>
@@ -740,31 +966,6 @@ border-bottom:1px solid #ff5c5c
         <y>80</y>
         <width>211</width>
         <height>51</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QLineEdit{
-	font: 75 11pt &quot;MS Serif&quot;;
-	
-background:transparent;
-border:none;
-color:#ff5c5c;
-	color: rgb(255, 92, 92);
-border-bottom:1px solid #ff5c5c
-
-}</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="newCategory">
-      <property name="geometry">
-       <rect>
-        <x>480</x>
-        <y>150</y>
-        <width>221</width>
-        <height>41</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -862,7 +1063,7 @@ background:#45a8ff;
 }</string>
       </property>
       <property name="text">
-       <string>ShowButton</string>
+       <string>Find</string>
       </property>
      </widget>
      <widget class="QPushButton" name="Reset">
@@ -1027,362 +1228,41 @@ border-bottom:1px solid #ff5c5c
        </property>
       </item>
      </widget>
+     <widget class="QComboBox" name="newCategory">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>170</y>
+        <width>201</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Plat</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gold</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Silver</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bronze</string>
+       </property>
+      </item>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
       <string>QUESTIONAIRE</string>
      </attribute>
-     <widget class="QLabel" name="label_30">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>460</y>
-        <width>471</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>5)Comment mesurerez-vous le succès de votre sponsoring?</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton_10">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>290</y>
-        <width>281</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Entre 5 000 $ et 10 000 $ (selver)</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_28">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>250</y>
-        <width>671</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;3)Quel est le budget prévu pour le sponsoring de notre application?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_27">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>160</y>
-        <width>731</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;2)Quelle est la durée d'engagement que vous envisagez pour le sponsoring de notre application?&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton_17">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>500</y>
-        <width>271</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Taux d'engagement</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton_2">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>110</y>
-        <width>181</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Alimentation</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton_7">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>220</y>
-        <width>181</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>1 an (gold)</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton_12">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>420</y>
-        <width>291</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>35-44 ans</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_20">
-      <property name="geometry">
-       <rect>
-        <x>60</x>
-        <y>30</y>
-        <width>771</width>
-        <height>551</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">
-border :1px solid rgb(255, 255, 255);
-border-radius :10px;
-color: #cfcfc;
-padding-left: 20px;
-padding-right:20px;
-</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton_15">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>440</y>
-        <width>291</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>45 ans et plus</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>90</y>
-        <width>181</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Mode</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton_14">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>400</y>
-        <width>281</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>25-34 ans</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_29">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>360</y>
-        <width>561</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>4)Quel est votre public cible principal?</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton_19">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>540</y>
-        <width>81</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Autre</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton_16">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>480</y>
-        <width>271</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string> Augmentation des ventes</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton_5">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>180</y>
-        <width>191</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>3 mois (bronze)</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton_11">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>330</y>
-        <width>291</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Plus de 20 000 $</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton_18">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>520</y>
-        <width>271</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Notoriété de la marque</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_23">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>50</y>
-        <width>481</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>1)Quel est le secteur d'activité de votre entreprise?</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_31">
-      <property name="geometry">
-       <rect>
-        <x>680</x>
-        <y>60</y>
-        <width>101</width>
-        <height>71</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">image: url(:/new/prefix1/Statistiques.png);
-background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton_8">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>270</y>
-        <width>271</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Moins de 5 000 $ (bronze)</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton_6">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>200</y>
-        <width>181</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>6 mois (selver)</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton_3">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>70</y>
-        <width>191</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Technologie</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton_13">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>380</y>
-        <width>271</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string> 18-24 ans</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton_4">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>130</y>
-        <width>181</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Autre</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="radioButton_9">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>310</y>
-        <width>291</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Entre 10 000 $ et 20 000 $(Gold)</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_21">
       <property name="geometry">
        <rect>
@@ -1402,47 +1282,858 @@ background-color: rgb(255, 255, 255);</string>
      <widget class="QLabel" name="label_22">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>991</width>
-        <height>611</height>
+        <x>0</x>
+        <y>0</y>
+        <width>1031</width>
+        <height>671</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">image: url(:/new/prefix1/BackRouge.png);</string>
+       <string notr="true">image: url(:/new/prefix1/BackRouge.png);
+color: rgb(211, 42, 0);
+background-color: rgb(208, 18, 11);</string>
       </property>
       <property name="text">
        <string/>
       </property>
      </widget>
+     <widget class="QTabWidget" name="tabWidget_2">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>10</y>
+        <width>891</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="tab_8">
+       <attribute name="title">
+        <string>1)Quel est le secteur d'activité de votre entreprise?</string>
+       </attribute>
+       <widget class="QRadioButton" name="radioButton_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>181</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Alimentation</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_3">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>191</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Technologie</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_4">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>80</y>
+          <width>181</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Autre</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>60</y>
+          <width>181</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Mode</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="stats2">
+        <property name="geometry">
+         <rect>
+          <x>690</x>
+          <y>70</y>
+          <width>221</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color: rgb(170, 0, 0);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+
+}
+
+QPushButton::hover{
+	font: 81 10pt &quot;Rockwell Extra Bold&quot;;
+color:white;
+border-radius:15px;
+background:#45a8ff;
+
+}</string>
+        </property>
+        <property name="text">
+         <string>figure graphique</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QTabWidget" name="tabWidget_3">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>160</y>
+        <width>891</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="tab_9">
+       <attribute name="title">
+        <string>2)Quelle est la durée d'engagement que vous envisagez pour le sponsoring de notre application?</string>
+       </attribute>
+       <widget class="QRadioButton" name="radioButton_6">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>181</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>6 mois (silver)</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_5">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>0</y>
+          <width>191</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>3 mois (bronze)</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_7">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>50</y>
+          <width>181</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>1 an(gold)</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="stats2_2">
+        <property name="geometry">
+         <rect>
+          <x>680</x>
+          <y>60</y>
+          <width>211</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color: rgb(170, 0, 0);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+
+}
+
+QPushButton::hover{
+	font: 81 10pt &quot;Rockwell Extra Bold&quot;;
+color:white;
+border-radius:15px;
+background:#45a8ff;
+
+}</string>
+        </property>
+        <property name="text">
+         <string>figure graphique</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QTabWidget" name="tabWidget_4">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>260</y>
+        <width>891</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="tab_10">
+       <attribute name="title">
+        <string>3)Quel est le budget prévu pour le sponsoring de notre application?</string>
+       </attribute>
+       <widget class="QRadioButton" name="radioButton_11">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>70</y>
+          <width>291</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Plus de 20 000 $ (plat)</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_9">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>50</y>
+          <width>291</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Entre 10 000 $ et 20 000 $(Gold)</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_10">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>281</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Entre 5 000 $ et 10 000 $ (silver)</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_12">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>251</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Moins de 5 000 $ (bronze)</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="stats2_3">
+        <property name="geometry">
+         <rect>
+          <x>680</x>
+          <y>70</y>
+          <width>211</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color: rgb(170, 0, 0);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+
+}
+
+QPushButton::hover{
+	font: 81 10pt &quot;Rockwell Extra Bold&quot;;
+color:white;
+border-radius:15px;
+background:#45a8ff;
+
+}</string>
+        </property>
+        <property name="text">
+         <string>figure graphique</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QTabWidget" name="tabWidget_5">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>390</y>
+        <width>891</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="tab_11">
+       <attribute name="title">
+        <string>4)Quel est votre public cible principal?</string>
+       </attribute>
+       <widget class="QRadioButton" name="radioButton_23">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>271</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string> 18-24 ans</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_20">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>40</y>
+          <width>291</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>35-44 ans</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_21">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>281</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>25-34 ans</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_22">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>291</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>45 ans et plus</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="stats2_4">
+        <property name="geometry">
+         <rect>
+          <x>680</x>
+          <y>60</y>
+          <width>211</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color: rgb(170, 0, 0);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+
+}
+
+QPushButton::hover{
+	font: 81 10pt &quot;Rockwell Extra Bold&quot;;
+color:white;
+border-radius:15px;
+background:#45a8ff;
+
+}</string>
+        </property>
+        <property name="text">
+         <string>figure graphique</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QTabWidget" name="tabWidget_6">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>510</y>
+        <width>891</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="tab_12">
+       <attribute name="title">
+        <string>5)Comment mesurerez-vous le succès de votre sponsoring?</string>
+       </attribute>
+       <widget class="QRadioButton" name="radioButton_24">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>271</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string> Augmentation des ventes</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_25">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>40</y>
+          <width>271</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Notoriété de la marque</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_26">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>271</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Taux d'engagement</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_27">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>60</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Autre</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="ok">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>60</y>
+          <width>191</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color: rgb(170, 0, 0);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+
+}
+
+QPushButton::hover{
+	font: 81 10pt &quot;Rockwell Extra Bold&quot;;
+color:white;
+border-radius:15px;
+background:#45a8ff;
+
+}</string>
+        </property>
+        <property name="text">
+         <string>VALIDER</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="stats2_5">
+        <property name="geometry">
+         <rect>
+          <x>680</x>
+          <y>60</y>
+          <width>211</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color: rgb(170, 0, 0);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+
+}
+
+QPushButton::hover{
+	font: 81 10pt &quot;Rockwell Extra Bold&quot;;
+color:white;
+border-radius:15px;
+background:#45a8ff;
+
+}</string>
+        </property>
+        <property name="text">
+         <string>figure graphique</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="reset_2">
+      <property name="geometry">
+       <rect>
+        <x>890</x>
+        <y>10</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color: rgb(170, 0, 0);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+
+}
+
+QPushButton::hover{
+	font: 81 10pt &quot;Rockwell Extra Bold&quot;;
+color:white;
+border-radius:15px;
+background:#45a8ff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>ASK</string>
+      </property>
+     </widget>
      <zorder>label_22</zorder>
-     <zorder>label_30</zorder>
-     <zorder>radioButton_10</zorder>
-     <zorder>label_28</zorder>
-     <zorder>label_27</zorder>
-     <zorder>radioButton_17</zorder>
-     <zorder>radioButton_2</zorder>
-     <zorder>radioButton_7</zorder>
-     <zorder>radioButton_12</zorder>
-     <zorder>pushButton_20</zorder>
-     <zorder>radioButton_15</zorder>
-     <zorder>radioButton</zorder>
-     <zorder>radioButton_14</zorder>
-     <zorder>label_29</zorder>
-     <zorder>radioButton_19</zorder>
-     <zorder>radioButton_16</zorder>
-     <zorder>radioButton_5</zorder>
-     <zorder>radioButton_11</zorder>
-     <zorder>radioButton_18</zorder>
-     <zorder>label_23</zorder>
-     <zorder>label_31</zorder>
-     <zorder>radioButton_8</zorder>
-     <zorder>radioButton_6</zorder>
-     <zorder>radioButton_3</zorder>
-     <zorder>radioButton_13</zorder>
-     <zorder>radioButton_4</zorder>
-     <zorder>radioButton_9</zorder>
      <zorder>label_21</zorder>
+     <zorder>tabWidget_2</zorder>
+     <zorder>tabWidget_3</zorder>
+     <zorder>tabWidget_4</zorder>
+     <zorder>tabWidget_5</zorder>
+     <zorder>tabWidget_6</zorder>
+     <zorder>reset_2</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_6">
+     <attribute name="title">
+      <string>LOGO PLACEMENT</string>
+     </attribute>
+     <widget class="QLabel" name="label_27">
+      <property name="geometry">
+       <rect>
+        <x>-220</x>
+        <y>-30</y>
+        <width>1371</width>
+        <height>641</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/new/prefix1/ah.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="logo1_2">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>280</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color: rgb(170, 0, 0);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+
+}
+
+QPushButton::hover{
+	font: 81 10pt &quot;Rockwell Extra Bold&quot;;
+color:white;
+border-radius:15px;
+background:#45a8ff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>HLeft</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="logo2">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>320</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color: rgb(170, 0, 0);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+
+}
+
+QPushButton::hover{
+	font: 81 10pt &quot;Rockwell Extra Bold&quot;;
+color:white;
+border-radius:15px;
+background:#45a8ff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>BRight</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="logo2_2">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>320</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color: rgb(170, 0, 0);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+
+}
+
+QPushButton::hover{
+	font: 81 10pt &quot;Rockwell Extra Bold&quot;;
+color:white;
+border-radius:15px;
+background:#45a8ff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>BLeft</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="logo2_3">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>280</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color: rgb(170, 0, 0);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+
+}
+
+QPushButton::hover{
+	font: 81 10pt &quot;Rockwell Extra Bold&quot;;
+color:white;
+border-radius:15px;
+background:#45a8ff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>HRight</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="reset">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>390</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color: rgb(170, 0, 0);
+border :1px solid rgb(255, 255, 255);
+border-radius :10px;
+color: #FFF;
+padding-left: 20px;
+padding-right:20px;
+
+}
+
+QPushButton::hover{
+	font: 81 10pt &quot;Rockwell Extra Bold&quot;;
+color:white;
+border-radius:15px;
+background:#45a8ff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>RESET</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QLabel" name="label_14">
@@ -1566,6 +2257,8 @@ image: url(:/new/prefix1/422112051_685019823787946_3501015430639793139_n.png);</
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
