@@ -45,7 +45,62 @@ MainWindow::MainWindow(QWidget *parent) :
       QVBoxLayout *layout = new QVBoxLayout(statsWidget);
       statsWidget->setLayout(layout);
 
+      int ret=A.connect_arduino(); // lancer la connexion à arduino
+      switch(ret){
+      case(0):qDebug()<< "arduino is available and connected to : "<< A.getarduino_port_name();
+          break;
+      case(1):qDebug() << "arduino is available but not connected to :" <<A.getarduino_port_name();
+         break;
+      case(-1):qDebug() << "arduino is not available";
+      }
+       QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
+       //le slot update_label suite à la reception du signal readyRead (reception des données).
 }
+
+void MainWindow::update_label()
+{
+    // Lire les données de l'Arduino
+
+    data = A.read_from_arduino();
+    QString rached = QString::fromUtf8(data);
+
+    if (data == "BuzzerActive")
+    {
+        QMessageBox::information(this, "warning", "Your heart beat is more than 90 beats.");
+    }
+
+    // Vérifier si les données sont lues correctement
+    if (data.isEmpty()) {
+        ui->labelBPM->setText("Aucune donnée lue depuis Arduino.");
+        return;
+    }
+
+    // Vérifier si les données reçues sont au format BPM
+    if (data.startsWith("BPM: ")) {
+        QMessageBox::information(this, "warning", "Your heart beat is more than 90 beats.");
+
+        QString searchText = ui->lineEdit_3->text();
+        // Extraire la valeur BPM des données
+        QString bpmString = data.mid(5); // 5 est la longueur de "BPM: "
+        int BPM = bpmString.toInt(); // Convertir la chaîne en entier
+
+        // Afficher les données BPM dans l'étiquette
+        ui->labelBPM->setText("BPM: " + QString::number(BPM));
+
+        // Vérifier si le BPM est supérieur à 90
+        if (BPM > 90) {
+            // Afficher un message lorsque le BPM dépasse 90
+            ui->labelBPM->setText("Heart rate is above 90 BPM!");
+        }
+
+        // Faites ce que vous voulez avec la valeur BPM ici
+    } else {
+        // Afficher les données non reconnues dans l'étiquette
+        ui->labelBPM->setText("your heart beat : " + data);
+    }
+}
+
+
 
 
 
@@ -855,6 +910,7 @@ void MainWindow::recherche(const QString& searchText) {
             // Check if the cell text contains the search text
             if (cellText.contains(searchText, Qt::CaseInsensitive)) {
                 found = true;
+
                 break; // No need to check other columns in this row
             }
         }
@@ -867,6 +923,7 @@ void MainWindow::recherche(const QString& searchText) {
 void MainWindow::on_find_clicked() {
     QString searchText = ui->lineEdit_3->text(); // Assuming your line edit object name is "lineEdit"
     recherche(searchText);
+
 }
 
 
@@ -885,4 +942,9 @@ void MainWindow::on_reset_search_clicked()
        for (int row = 0; row < rowCount; ++row) {
            ui->tableView->setRowHidden(row, false);
        }
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    A.write_to_arduino("1");
 }

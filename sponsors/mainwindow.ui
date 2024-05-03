@@ -792,6 +792,39 @@ background:#45a8ff;
        <string>reset</string>
       </property>
      </widget>
+     <widget class="QLabel" name="ard">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>570</y>
+        <width>56</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelBPM">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>410</y>
+        <width>291</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(230, 218, 203);
+ font: 87 9pt &quot;Arial Black&quot;; 
+  border-radius: 10px ; /* Arrondi dans tous les coins */
+  border: 2px solid rgb(86, 53, 93); /* Bordure de la QLabel en couleur RGB spécifiée */   /*background-color: transparent;*/
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
      <zorder>label_32</zorder>
      <zorder>tableView</zorder>
      <zorder>label_24</zorder>
@@ -803,6 +836,8 @@ background:#45a8ff;
      <zorder>lineEdit_3</zorder>
      <zorder>find</zorder>
      <zorder>reset_search</zorder>
+     <zorder>ard</zorder>
+     <zorder>labelBPM</zorder>
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">

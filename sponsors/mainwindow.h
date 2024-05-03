@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 #include "sponsors.h"
 #include <QMainWindow>
-
+#include "arduino.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -16,6 +16,7 @@ public:
     ~MainWindow();
 
 private slots:
+    void update_label();
     void on_button_ajouter_clicked();
 
     void on_pushButton_2_clicked();
@@ -92,10 +93,17 @@ private slots:
 
      void on_reset_search_clicked();
 
+     void on_pushButton_clicked();
+
+     void on_pushButton_4_clicked();
+
 private:
     QWidget *statsWidget;
     Ui::MainWindow *ui;
     Sponsors S;
+    QByteArray data; // variable contenant les données reçues
+
+    Arduino A;
 
     int countType(const QString &category);
        void createColorfulCircleChart();
